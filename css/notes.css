@@ -41,7 +41,7 @@
   background: rgba(70,70,120,0.9);
 }
 
-/* Chapter content wrapper for slide animation */
+/* Chapter content slide animation */
 .chapter-content {
   max-height: 0;
   overflow: hidden;
@@ -77,9 +77,9 @@
   margin: 0.3rem 0 0.5rem 1rem;
 }
 
-/* Scrollable content inside topic */
+/* Scrollable content inside wrapper */
 .topic-content {
-  max-height: 300px;       /* scrolling area */
+  height: 300px;            /* fixed height to allow scrolling */
   overflow-y: auto;
   padding: 0.5rem 0.7rem;
   background: rgba(30,30,70,0.8);
