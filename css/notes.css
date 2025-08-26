@@ -69,17 +69,31 @@
   background: rgba(90,90,150,0.9);
 }
 
-/* Topic content (slide down) */
 .topic-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  margin: 0.3rem 0 0.5rem 1rem;
-  padding: 0 0.7rem;
+  max-height: 300px;       /* limit the height of the dropdown */
+  overflow-y: auto;        /* add vertical scroll if content exceeds max-height */
+  padding: 0.5rem 0.7rem;
   background: rgba(30,30,70,0.8);
   border-radius: 8px;
   color: #fff;
+  transition: max-height 0.4s ease; /* optional smooth expand effect */
 }
+
+/* Optional: scrollbar styling for modern browsers */
+.topic-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.topic-content::-webkit-scrollbar-thumb {
+  background: rgba(90,150,255,0.5);
+  border-radius: 4px;
+}
+
+.topic-content::-webkit-scrollbar-track {
+  background: rgba(30,30,70,0.3);
+  border-radius: 4px;
+}
+
 
 /* Active classes to show content */
 .chapter.active .chapter-content {
