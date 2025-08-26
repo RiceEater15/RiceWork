@@ -41,7 +41,7 @@
   background: rgba(70,70,120,0.9);
 }
 
-/* Chapter content (slide down) */
+/* Chapter content (collapsed by default, auto-height with JS) */
 .chapter-content {
   max-height: 0;
   overflow: hidden;
@@ -71,7 +71,7 @@
   background: rgba(90,90,150,0.9);
 }
 
-/* Topic content */
+/* Topic content (collapsed by default, auto-height with JS) */
 .topic-content {
   max-height: 0;
   overflow: hidden;
@@ -80,18 +80,6 @@
   background: rgba(30,30,70,0.8);
   border-radius: 8px;
   color: #fff;
-}
-
-/* Active classes to show content */
-.chapter.active .chapter-content {
-  max-height: 2000px; /* large enough to show all content */
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-.topic.active .topic-content {
-  max-height: 1000px; /* enough for formulas and images */
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 /* Images */
