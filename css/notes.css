@@ -79,7 +79,7 @@
 
 /* Scrollable content inside topic */
 .topic-content {
-  max-height: 300px;       /* scrollable height */
+  max-height: 300px;       /* scrolling area */
   overflow-y: auto;
   padding: 0.5rem 0.7rem;
   background: rgba(30,30,70,0.8);
@@ -87,7 +87,7 @@
   color: #fff;
 }
 
-/* Optional: scrollbar styling for modern browsers */
+/* Scrollbar styling */
 .topic-content::-webkit-scrollbar {
   width: 8px;
 }
@@ -100,7 +100,7 @@
   border-radius: 4px;
 }
 
-/* Style for dropdown images */
+/* Images */
 .dropdown-image {
   display: block;
   max-width: 100%;
