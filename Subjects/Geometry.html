@@ -4,71 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Geometry Notes - RiceWork</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/notes.css">
-  <script src="js/scripts.js" defer></script>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/notes.css">
+  <script src="../js/scripts.js" defer></script>
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">RiceWork</div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="subjects.html">Subjects</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../subjects.html">Subjects</a></li>
     </ul>
   </nav>
 
-  <!-- Note Header -->
-  <section class="note-header fade-slide-down">
+  <!-- Page Header -->
+  <header class="notes-header">
     <h1>Welcome to Geometry</h1>
-    <p>Select a chapter below to explore concepts and formulas.</p>
-  </section>
+    <p>Select a chapter below to explore notes and formulas.</p>
+  </header>
 
-  <!-- Chapters -->
-  <section class="chapters fade-slide-up">
-    <!-- Example Chapter -->
+  <!-- Chapters Section -->
+  <main class="notes-container">
     <div class="chapter">
-      <button class="chapter-toggle">Chapter 1: Transformations</button>
+      <button class="chapter-toggle">Chapter 1: Transformations ▾</button>
       <div class="chapter-content">
-        <div class="subtopic">
-          <button class="subtopic-toggle">Translation</button>
-          <div class="subtopic-content">
+        <div class="topic">
+          <button class="topic-toggle">Translations ▾</button>
+          <div class="topic-content">
             <p><strong>Formula:</strong> (x, y) → (x + a, y + b)</p>
           </div>
         </div>
-        <div class="subtopic">
-          <button class="subtopic-toggle">Rotation</button>
-          <div class="subtopic-content">
-            <p><strong>90° Rotation:</strong> (x, y) → (−y, x)</p>
-            <p><strong>180° Rotation:</strong> (x, y) → (−x, −y)</p>
-            <p><strong>270° Rotation:</strong> (x, y) → (y, −x)</p>
+        <div class="topic">
+          <button class="topic-toggle">Rotations ▾</button>
+          <div class="topic-content">
+            <p><strong>90° Rotation:</strong> (x, y) → (-y, x)</p>
+            <p><strong>180° Rotation:</strong> (x, y) → (-x, -y)</p>
+            <p><strong>270° Rotation:</strong> (x, y) → (y, -x)</p>
           </div>
         </div>
-        <div class="subtopic">
-          <button class="subtopic-toggle">Reflection</button>
-          <div class="subtopic-content">
-            <p><strong>Over x-axis:</strong> (x, y) → (x, −y)</p>
-            <p><strong>Over y-axis:</strong> (x, y) → (−x, y)</p>
-            <p><strong>Over y=x:</strong> (x, y) → (y, x)</p>
+        <div class="topic">
+          <button class="topic-toggle">Reflections ▾</button>
+          <div class="topic-content">
+            <p><strong>Across x-axis:</strong> (x, y) → (x, -y)</p>
+            <p><strong>Across y-axis:</strong> (x, y) → (-x, y)</p>
+            <p><strong>Across y = x:</strong> (x, y) → (y, x)</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Repeat this structure for Chapter 2 through Chapter 12 -->
+    <!-- More chapters -->
     <div class="chapter">
-      <button class="chapter-toggle">Chapter 2: Triangles</button>
+      <button class="chapter-toggle">Chapter 2: Triangles ▾</button>
       <div class="chapter-content">
-        <div class="subtopic">
-          <button class="subtopic-toggle">Pythagorean Theorem</button>
-          <div class="subtopic-content">
-            <p>a² + b² = c²</p>
-          </div>
-        </div>
+        <p>Notes about triangle properties and formulas...</p>
       </div>
     </div>
 
-    <!-- More chapters... -->
-  </section>
+    <div class="chapter">
+      <button class="chapter-toggle">Chapter 3: Circles ▾</button>
+      <div class="chapter-content">
+        <p>Notes about circle theorems and equations...</p>
+      </div>
+    </div>
+    <!-- Add more chapters as needed -->
+  </main>
 </body>
 </html>
