@@ -1,18 +1,24 @@
+/* Push content below navbar */
 .notes-header, .notes-container {
-  padding-top: 100px; 
+  padding-top: 100px; /* navbar height + spacing */
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
   color: #fff;
 }
 
+/* Header */
 .notes-header h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 0.5rem;
   text-shadow: 0 0 15px #5ab0ff;
 }
-.notes-header p { font-size: 1.1rem; opacity:0.8; }
+.notes-header p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
 
+/* Chapters */
 .chapter {
   margin: 1rem 0;
   border-radius: 12px;
@@ -31,16 +37,24 @@
   cursor: pointer;
   transition: background 0.3s;
 }
-.chapter-toggle:hover { background: rgba(70,70,120,0.9); }
+.chapter-toggle:hover {
+  background: rgba(70,70,120,0.9);
+}
 
+/* Chapter content (slide down) */
 .chapter-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease, padding 0.4s ease;
   padding-left: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.topic { margin: 0.5rem 0; }
+/* Topics */
+.topic {
+  margin: 0.5rem 0;
+}
 .topic-toggle {
   width:95%;
   text-align:left;
@@ -50,32 +64,37 @@
   color:#ddd;
   border:none;
   cursor:pointer;
-  transition:0.3s;
+  transition: background 0.3s;
   border-radius:8px;
 }
-.topic-toggle:hover { background: rgba(90,90,150,0.9); }
-/* Start hidden */
-.topic-content { 
-  max-height: 0;          /* fully hidden by default */
-  overflow: hidden;       /* prevent content from showing */
-  padding: 0.5rem 0.7rem;
+.topic-toggle:hover {
+  background: rgba(90,90,150,0.9);
+}
+
+/* Topic content */
+.topic-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 0.7rem;  /* horizontal padding only */
   background: rgba(30,30,70,0.8);
   border-radius: 8px;
   color: #fff;
-  transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
-/* Show content when active */
-.topic.active .topic-content { 
-  max-height: 500px;      /* enough to fit typical formulas/images */
-  padding: 0.5rem 0.7rem; /* restore padding when open */
+/* Active classes to show content */
+.chapter.active .chapter-content {
+  max-height: 2000px; /* large enough to show all content */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.topic.active .topic-content {
+  max-height: 1000px; /* enough for formulas and images */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-
-/* Show content when active */
-.chapter.active .chapter-content { max-height: 1000px; }
-.topic.active .topic-content { max-height: 1000px; }
-
+/* Images */
 .dropdown-image {
   display:block;
   max-width:100%;
