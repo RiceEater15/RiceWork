@@ -25,4 +25,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+// Chapter toggles
+document.querySelectorAll(".chapter-toggle").forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.classList.toggle("active");
+  });
+});
+
+// Topic toggles
+document.querySelectorAll(".topic-toggle").forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.classList.toggle("active");
+  });
+});
+
 
