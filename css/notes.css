@@ -1,6 +1,6 @@
 /* Push content below navbar */
 .notes-header, .notes-container {
-  padding-top: 100px; /* height of navbar + extra space */
+  padding-top: 100px; /* navbar height + spacing */
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
@@ -26,7 +26,6 @@
   background: rgba(20,20,40,0.8);
   box-shadow: 0 0 10px #5ab0ff33;
 }
-
 .chapter-toggle {
   width: 100%;
   text-align: left;
@@ -38,18 +37,19 @@
   cursor: pointer;
   transition: background 0.3s;
 }
-
 .chapter-toggle:hover {
   background: rgba(70,70,120,0.9);
 }
 
-/* Show/Hide using active class */
+/* Chapter content (slide down) */
 .chapter-content {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
   padding-left: 1rem;
 }
 
-/* Topic */
+/* Topics */
 .topic {
   margin: 0.5rem 0;
 }
@@ -69,20 +69,22 @@
   background: rgba(90,90,150,0.9);
 }
 
-/* Topic content */
+/* Topic content (slide down) */
 .topic-content {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
   margin: 0.3rem 0 0.5rem 1rem;
-  padding: 0.5rem 0.7rem;
+  padding: 0 0.7rem;
   background: rgba(30,30,70,0.8);
   border-radius: 8px;
   color: #fff;
 }
 
-/* Active class to show content */
-.chapter.active > .chapter-content {
-  display: block;
+/* Active classes to show content */
+.chapter.active .chapter-content {
+  max-height: 1000px; /* large enough to show all content */
 }
-.topic.active > .topic-content {
-  display: block;
+.topic.active .topic-content {
+  max-height: 500px; /* large enough for formulas */
 }
