@@ -88,3 +88,14 @@
 .topic.active .topic-content {
   max-height: 500px; /* large enough for formulas */
 }
+
+/* Style for dropdown images */
+.dropdown-image {
+  display: block;       /* ensures it’s on a new line */
+  max-width: 100%;      /* responsive to container width */
+  height: auto;         /* keep aspect ratio */
+  margin: 0.5rem 0;     /* spacing above/below */
+  border-radius: 8px;   /* optional rounded corners */
+  box-shadow: 0 0 10px rgba(90, 150, 255, 0.5); /* slight glow effect */
+}
+
