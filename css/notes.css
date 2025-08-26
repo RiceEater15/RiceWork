@@ -37,21 +37,19 @@
   border: none;
   cursor: pointer;
   transition: background 0.3s;
-  border-radius: 0;
 }
+
 .chapter-toggle:hover {
   background: rgba(70,70,120,0.9);
 }
 
-/* Chapter content - use height auto trick with JS */
+/* Show/Hide using active class */
 .chapter-content {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.4s ease;
+  display: none;
   padding-left: 1rem;
 }
 
-/* Topics */
+/* Topic */
 .topic {
   margin: 0.5rem 0;
 }
@@ -73,15 +71,18 @@
 
 /* Topic content */
 .topic-content {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.4s ease;
+  display: none;
   margin: 0.3rem 0 0.5rem 1rem;
-  padding: 0 0.7rem;
+  padding: 0.5rem 0.7rem;
   background: rgba(30,30,70,0.8);
   border-radius: 8px;
   color: #fff;
 }
-.topic-content p {
-  margin: 0.5rem 0;
+
+/* Active class to show content */
+.chapter.active > .chapter-content {
+  display: block;
+}
+.topic.active > .topic-content {
+  display: block;
 }
