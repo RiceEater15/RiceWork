@@ -1,0 +1,89 @@
+/* Note Header */
+.note-header {
+  padding: 7rem 2rem 2rem;
+  text-align: center;
+}
+.note-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px #5ab0ff;
+}
+.note-header p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+/* Chapters Accordion */
+.chapters {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+.chapter {
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(20,20,60,0.6);
+  box-shadow: 0 0 15px #5ab0ff33;
+}
+.chapter-toggle {
+  width: 100%;
+  background: rgba(90,176,255,0.2);
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 1rem;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.chapter-toggle:hover {
+  background: rgba(90,176,255,0.35);
+}
+.chapter-content {
+  display: none;
+  padding: 1rem;
+  background: rgba(255,255,255,0.05);
+}
+
+/* Subtopics */
+.subtopic {
+  margin-bottom: 1rem;
+}
+.subtopic-toggle {
+  width: 100%;
+  background: rgba(154,107,255,0.2);
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.subtopic-toggle:hover {
+  background: rgba(154,107,255,0.35);
+}
+.subtopic-content {
+  display: none;
+  margin-top: 0.6rem;
+  padding: 0.7rem 1rem;
+  background: rgba(255,255,255,0.08);
+  border-radius: 8px;
+}
+.subtopic-content p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Active State */
+.chapter.active .chapter-content {
+  display: block;
+}
+.subtopic.active .subtopic-content {
+  display: block;
+}
