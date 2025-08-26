@@ -54,17 +54,23 @@
   border-radius:8px;
 }
 .topic-toggle:hover { background: rgba(90,90,150,0.9); }
-
 /* Start hidden */
 .topic-content { 
-  max-height: 0;
-  overflow: hidden;
+  max-height: 0;          /* fully hidden by default */
+  overflow: hidden;       /* prevent content from showing */
   padding: 0.5rem 0.7rem;
   background: rgba(30,30,70,0.8);
   border-radius: 8px;
   color: #fff;
-  transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease, padding 0.4s ease;
 }
+
+/* Show content when active */
+.topic.active .topic-content { 
+  max-height: 500px;      /* enough to fit typical formulas/images */
+  padding: 0.5rem 0.7rem; /* restore padding when open */
+}
+
 
 /* Show content when active */
 .chapter.active .chapter-content { max-height: 1000px; }
