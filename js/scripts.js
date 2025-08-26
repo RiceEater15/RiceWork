@@ -13,28 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Chapter toggle
   document.querySelectorAll(".chapter-toggle").forEach(btn => {
     btn.addEventListener("click", () => {
-      const chapter = btn.parentElement;
       const content = btn.nextElementSibling;
-      chapter.classList.toggle("active");
-      if (chapter.classList.contains("active")) {
-        content.style.maxHeight = content.scrollHeight + "px";
-      } else {
-        content.style.maxHeight = null;
-      }
+      content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
     });
   });
 
   // Topic toggle
   document.querySelectorAll(".topic-toggle").forEach(btn => {
     btn.addEventListener("click", () => {
-      const topic = btn.parentElement;
       const wrapper = btn.nextElementSibling; // topic-content-wrapper
-      topic.classList.toggle("active");
-      if (topic.classList.contains("active")) {
-        wrapper.style.maxHeight = wrapper.scrollHeight + "px";
-      } else {
-        wrapper.style.maxHeight = null;
-      }
+      wrapper.style.maxHeight = wrapper.style.maxHeight ? null : wrapper.scrollHeight + "px";
     });
   });
 });
