@@ -1,89 +1,86 @@
-/* Note Header */
-.note-header {
-  padding: 7rem 2rem 2rem;
+/* Notes Page Styling */
+.notes-header {
   text-align: center;
-}
-.note-header h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 0.5rem;
-  text-shadow: 0 0 15px #5ab0ff;
-}
-.note-header p {
-  font-size: 1.1rem;
-  opacity: 0.8;
+  margin: 2rem 0;
+  color: #fff;
 }
 
-/* Chapters Accordion */
-.chapters {
-  max-width: 900px;
-  margin: 2rem auto;
+.notes-container {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 1rem;
 }
+
+/* Chapter styling */
 .chapter {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   border-radius: 12px;
   overflow: hidden;
-  background: rgba(20,20,60,0.6);
-  box-shadow: 0 0 15px #5ab0ff33;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 10px rgba(138, 180, 255, 0.2);
 }
+
 .chapter-toggle {
   width: 100%;
-  background: rgba(90,176,255,0.2);
-  border: none;
-  outline: none;
-  color: #fff;
-  padding: 1rem;
   text-align: left;
-  font-size: 1.1rem;
-  font-weight: bold;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: rgba(20, 20, 40, 0.8);
+  color: #fff;
+  border: none;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
 }
+
 .chapter-toggle:hover {
-  background: rgba(90,176,255,0.35);
+  background: rgba(60, 60, 100, 0.8);
+  box-shadow: 0 0 10px #6e8efb;
 }
+
+/* Chapter Content */
 .chapter-content {
-  display: none;
-  padding: 1rem;
-  background: rgba(255,255,255,0.05);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  background: rgba(10, 10, 30, 0.8);
+  padding-left: 1rem;
 }
 
-/* Subtopics */
-.subtopic {
-  margin-bottom: 1rem;
+/* Topic Styling */
+.topic {
+  margin: 0.5rem 0;
 }
-.subtopic-toggle {
-  width: 100%;
-  background: rgba(154,107,255,0.2);
-  border: none;
-  outline: none;
-  color: #fff;
-  padding: 0.7rem 1rem;
+
+.topic-toggle {
+  width: 95%;
   text-align: left;
+  padding: 0.8rem;
   font-size: 1rem;
+  background: rgba(30, 30, 60, 0.8);
+  color: #ddd;
+  border: none;
   cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
   border-radius: 8px;
-  transition: background 0.3s;
-}
-.subtopic-toggle:hover {
-  background: rgba(154,107,255,0.35);
-}
-.subtopic-content {
-  display: none;
-  margin-top: 0.6rem;
-  padding: 0.7rem 1rem;
-  background: rgba(255,255,255,0.08);
-  border-radius: 8px;
-}
-.subtopic-content p {
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
 }
 
-/* Active State */
-.chapter.active .chapter-content {
-  display: block;
+.topic-toggle:hover {
+  background: rgba(70, 70, 120, 0.9);
+  box-shadow: 0 0 8px #9face6;
 }
-.subtopic.active .subtopic-content {
-  display: block;
+
+/* Topic Content */
+.topic-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  background: rgba(20, 20, 50, 0.8);
+  margin: 0.3rem 0 0.5rem 1rem;
+  padding: 0 0.8rem;
+  border-radius: 8px;
+}
+
+.topic-content p {
+  margin: 0.5rem 0;
+  color: #fff;
 }
