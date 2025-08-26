@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Chapter toggle
+  // Toggle chapters
   document.querySelectorAll(".chapter-toggle").forEach(btn => {
     btn.addEventListener("click", () => {
       btn.parentElement.classList.toggle("active");
     });
   });
 
-  // Topic toggle
+  // Toggle topics
   document.querySelectorAll(".topic-toggle").forEach(btn => {
     btn.addEventListener("click", () => {
       btn.parentElement.classList.toggle("active");
