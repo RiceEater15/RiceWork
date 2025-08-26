@@ -1,23 +1,30 @@
-/* Notes Page Styling */
-.notes-header {
+/* Push content below navbar */
+.notes-header, .notes-container {
+  padding-top: 100px; /* height of navbar + extra space */
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
-  margin: 2rem 0;
   color: #fff;
 }
 
-.notes-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem;
+/* Header */
+.notes-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px #5ab0ff;
+}
+.notes-header p {
+  font-size: 1.1rem;
+  opacity: 0.8;
 }
 
-/* Chapter styling */
+/* Chapters */
 .chapter {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   border-radius: 12px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 10px rgba(138, 180, 255, 0.2);
+  background: rgba(20,20,40,0.8);
+  box-shadow: 0 0 10px #5ab0ff33;
 }
 
 .chapter-toggle {
@@ -25,62 +32,56 @@
   text-align: left;
   padding: 1rem;
   font-size: 1.2rem;
-  background: rgba(20, 20, 40, 0.8);
+  background: rgba(30,30,60,0.9);
   color: #fff;
   border: none;
   cursor: pointer;
-  transition: background 0.3s, box-shadow 0.3s;
+  transition: background 0.3s;
+  border-radius: 0;
 }
-
 .chapter-toggle:hover {
-  background: rgba(60, 60, 100, 0.8);
-  box-shadow: 0 0 10px #6e8efb;
+  background: rgba(70,70,120,0.9);
 }
 
-/* Chapter Content */
+/* Chapter content - use height auto trick with JS */
 .chapter-content {
-  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-  background: rgba(10, 10, 30, 0.8);
+  max-height: 0;
+  transition: max-height 0.4s ease;
   padding-left: 1rem;
 }
 
-/* Topic Styling */
+/* Topics */
 .topic {
   margin: 0.5rem 0;
 }
-
 .topic-toggle {
   width: 95%;
   text-align: left;
-  padding: 0.8rem;
+  padding: 0.7rem 1rem;
   font-size: 1rem;
-  background: rgba(30, 30, 60, 0.8);
+  background: rgba(50,50,90,0.8);
   color: #ddd;
   border: none;
   cursor: pointer;
-  transition: background 0.3s, box-shadow 0.3s;
+  transition: background 0.3s;
   border-radius: 8px;
 }
-
 .topic-toggle:hover {
-  background: rgba(70, 70, 120, 0.9);
-  box-shadow: 0 0 8px #9face6;
+  background: rgba(90,90,150,0.9);
 }
 
-/* Topic Content */
+/* Topic content */
 .topic-content {
-  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-  background: rgba(20, 20, 50, 0.8);
+  max-height: 0;
+  transition: max-height 0.4s ease;
   margin: 0.3rem 0 0.5rem 1rem;
-  padding: 0 0.8rem;
+  padding: 0 0.7rem;
+  background: rgba(30,30,70,0.8);
   border-radius: 8px;
+  color: #fff;
 }
-
 .topic-content p {
   margin: 0.5rem 0;
-  color: #fff;
 }
