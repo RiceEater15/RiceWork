@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometry Notes - RiceWork</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/notes.css">
+  <script src="js/scripts.js" defer></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">RiceWork</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="subjects.html">Subjects</a></li>
+    </ul>
+  </nav>
+
+  <!-- Note Header -->
+  <section class="note-header fade-slide-down">
+    <h1>Welcome to Geometry</h1>
+    <p>Select a chapter below to explore concepts and formulas.</p>
+  </section>
+
+  <!-- Chapters -->
+  <section class="chapters fade-slide-up">
+    <!-- Example Chapter -->
+    <div class="chapter">
+      <button class="chapter-toggle">Chapter 1: Transformations</button>
+      <div class="chapter-content">
+        <div class="subtopic">
+          <button class="subtopic-toggle">Translation</button>
+          <div class="subtopic-content">
+            <p><strong>Formula:</strong> (x, y) → (x + a, y + b)</p>
+          </div>
+        </div>
+        <div class="subtopic">
+          <button class="subtopic-toggle">Rotation</button>
+          <div class="subtopic-content">
+            <p><strong>90° Rotation:</strong> (x, y) → (−y, x)</p>
+            <p><strong>180° Rotation:</strong> (x, y) → (−x, −y)</p>
+            <p><strong>270° Rotation:</strong> (x, y) → (y, −x)</p>
+          </div>
+        </div>
+        <div class="subtopic">
+          <button class="subtopic-toggle">Reflection</button>
+          <div class="subtopic-content">
+            <p><strong>Over x-axis:</strong> (x, y) → (x, −y)</p>
+            <p><strong>Over y-axis:</strong> (x, y) → (−x, y)</p>
+            <p><strong>Over y=x:</strong> (x, y) → (y, x)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat this structure for Chapter 2 through Chapter 12 -->
+    <div class="chapter">
+      <button class="chapter-toggle">Chapter 2: Triangles</button>
+      <div class="chapter-content">
+        <div class="subtopic">
+          <button class="subtopic-toggle">Pythagorean Theorem</button>
+          <div class="subtopic-content">
+            <p>a² + b² = c²</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- More chapters... -->
+  </section>
+</body>
+</html>
